@@ -1,0 +1,4 @@
+git config --global user.name "yujun"
+git config --global user.email yu.jun.reach@gmail.com
+git config --global core.editor vim
+git config --list

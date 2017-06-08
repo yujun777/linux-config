@@ -1,0 +1,3 @@
+sshd:
+1. ssh-host-config失败，检查var/{log,run,empty}是否有读写权限；是否以管理员身份运行cygwin(创建sshd service可能需要管理员权限)
+2. sshd服务启动报1069登录失败提示，在ssh-host-config步骤需要创建用户cyg_server来启动sshd服务，但是windows系统已经包含了cyg_server用户，更换一个用户名
