@@ -2,7 +2,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
 "Bundle 'Lokaltog/vim-powerline'
 Bundle 'bling/vim-airline'
 Bundle 'vim-misc'
@@ -17,8 +17,8 @@ Bundle 'lua-support'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/AutoComplPop'
-Bundle 'yakiang/excel.vim'
-Bundle 'yuratomo/w3m.vim'
-Bundle 'rhysd/open-pdf.vim'
+"Bundle 'yakiang/excel.vim'
+"Bundle 'yuratomo/w3m.vim'
+"Bundle 'rhysd/open-pdf.vim'
 
 filetype plugin indent on 
