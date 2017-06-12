@@ -80,6 +80,9 @@ let NERDTreeWinPos="right"
 "
 " " 当打开 NERDTree 窗口时，自动显示 Bookmarks
 " let NERDTreeShowBookmarks=1
+"
+" 忽略一下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 "-------------------------------------------------
 
 let g:EasyGrepCommand = 1
