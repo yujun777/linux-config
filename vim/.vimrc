@@ -48,6 +48,8 @@ nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 "hi linenr ctermfg=grey
 "hi LineNr guibg=darkgrey ctermbg=darkgrey guifg=white ctermfg=grey
 
+"设置主题
+colorscheme peachpuff
 "注释颜色
 "hi Comment ctermfg=DarkGrey ctermbg=black guifg=DarkGrey gui=bold
 hi Comment    term=reverse  ctermfg=darkgreen 
