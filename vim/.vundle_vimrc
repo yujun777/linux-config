@@ -21,6 +21,7 @@ Bundle 'vim-scripts/AutoComplPop'
 "Bundle 'yuratomo/w3m.vim'
 "Bundle 'rhysd/open-pdf.vim'
 "python syntax check
-Bundle 'kevinw/pyflakes-vim' 
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/taglist.vim'
 
 filetype plugin indent on 

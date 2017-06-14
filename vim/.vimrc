@@ -18,8 +18,8 @@ set smartindent
 set backspace=indent,eol,start
 set nowrap
 set nu
-"set smarttab  
-"set expandtab  
+set smarttab  
+set expandtab  
 "set tabstop=4  
 "set softtabstop=4  
 "set shiftwidth=4  
@@ -35,15 +35,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 set completeopt=longest,menu
 
-nmap <C-/>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-/>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-/>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-/>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-/>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-/>f :cs find f <C-R>=expand("<cword>")<CR><CR>
-nmap <C-/>i :cs find i ^<C-R>=expand("<cword>")<CR>$<CR>
-nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
 "set t_Co=256
 "hi linenr ctermfg=grey
 "hi LineNr guibg=darkgrey ctermbg=darkgrey guifg=white ctermfg=grey
@@ -55,13 +46,30 @@ colorscheme peachpuff
 hi Comment    term=reverse  ctermfg=darkgreen 
 "darkcyan
 
+"-------------------------------------------------
+"                 cscope
+if filereadable("cscope.out") 
+	cs add cscope.out 
+endif 
+nmap <C-/>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-/>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-/>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-/>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-/>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-/>f :cs find f <C-R>=expand("<cword>")<CR><CR>
+nmap <C-/>i :cs find i ^<C-R>=expand("<cword>")<CR>$<CR>
+nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
 "---------------------------------------------
 "一些VIM帮助
 ":helptags ~/.vim/doc 重新编译帮助文件
 "---------------------------------------------
+" 		Taglist
 "
-
-
+let Tlist_Show_One_File=0                    " 只显示当前文件的tags
+let Tlist_Exit_OnlyWindow=1                  " 如果Taglist窗口是最后一个窗口则退出Vim
+"let Tlist_Use_Right_Window=1                 " 在右侧窗口中显示
+"let Tlist_File_Fold_Auto_Close=1             " 自动折叠
 "-------------------------------------------------
 "                  vim lua file ftpplugin
 "let g:lua_check_globals = 1
