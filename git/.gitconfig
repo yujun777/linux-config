@@ -3,6 +3,7 @@
 	email = yu.jun.reach@gmail.com
 [core]
 	editor = vim
+	excludesfile = /home/yujun/.gitignore_global
 
 ##保存密码
 [credential]
