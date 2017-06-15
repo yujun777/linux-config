@@ -31,6 +31,10 @@ Bundle 'jlanzarotta/bufexplorer'
 Bundle 'vim-scripts/winmanager'
 
 "---------------------------------------------
+"查找
+Bundle 'mileszs/ack.vim'
+Bundle 'dyng/ctrlsf.vim'
+"---------------------------------------------
 "python支持 
 "语法检查
 Bundle 'scrooloose/syntastic'
