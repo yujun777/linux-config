@@ -18,6 +18,9 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "set fileencodings=gbk  
 
 "-------------------------------------------------
+"                 快捷键
+let mapleader=";"
+"-------------------------------------------------
 "                 样式
 "set ambiwidth=double
 set smartindent  
@@ -69,9 +72,6 @@ nmap <C-\>i :cs find i ^<C-R>=expand("<cword>")<CR>$<CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 "---------------------------------------------
-"一些VIM帮助
-":helptags ~/.vim/doc 重新编译帮助文件
-"---------------------------------------------
 " 		Taglist
 let Tlist_Show_One_File=0                    " 只显示当前文件的tags
 let Tlist_Exit_OnlyWindow=1                  " 如果Taglist窗口是最后一个窗口则退出Vim
@@ -100,11 +100,11 @@ let NERDTreeWinPos="right"
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
 "-------------------------------------------------
 "               界面管理
-"let g:winManagerWindowLayout = "TagList|NERDTree,BufExplorer"
 let g:winManagerWidth = 25
-let g:NERDTree_title="[NERDTree]"  
-let g:winManagerWindowLayout="NERDTree|TagList"  
+"let g:winManagerWindowLayout="NERDTree|TagList"  
+let g:winManagerWindowLayout="NERDTree|Tagbar"  
   
+let g:NERDTree_title="[NERDTree]"  
 function! NERDTree_Start()  
     exec 'NERDTree'  
 endfunction  
@@ -112,16 +112,29 @@ endfunction
 function! NERDTree_IsValid()  
     return 1  
 endfunction  
-"-------------------------------------------------
-"               EasyGrep
-let g:EasyGrepCommand = 1
-"let g:EasyGrepFileAssociations = "C:\\Program Files\\Vim\\vim72\\plugin\\EasyGrepFileAssociations"
-let g:EasyGrepRecursive = 1
-let g:EasyGrepHidden = 0
-let g:EasyGrepExtraWarnings=0
-let g:EasyGrepIgnoreCase= 1
 
-nnoremap <silent> <F3> :Rgrep<CR>
+let g:tagbar_vertical = 40
+let g:Tagbar_title = "[Tagbar]"
+function! Tagbar_Start()
+    exec 'TagbarOpen'
+endfunction
+
+function! Tagbar_IsValid()
+    return 1
+endfunction
+"-------------------------------------------------
+"           CtrlP
+"let g:ctrlp_map = '<c-p>' 
+let g:ctrlp_cmd = 'CtrlP'
+" 设置过滤不进行查找的后缀名 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(pyc|so|dll|swp)$',
+  \}
+"-------------------------------------------------
+"           CtrlSF
+"nnoremap <Leader>sf :CtrlSF<CR>
+nmap <Leader>sf :CtrlSF <C-R>=expand("<cword>")<CR><CR>
 "-------------------------------------------------
 "               powerline
 set laststatus=2
@@ -129,4 +142,16 @@ set guifont=PowerlineSymbols\ for\ Powerline
 set nocompatible
 let g:Powerline_symbols = 'fancy'
 "-------------------------------------------------
-
+"一些VIM帮助
+":helptags ~/.vim/doc 重新编译帮助文件
+"-------------------------------------------------
+" 汇集的常见操作
+"
+" 窗口  
+" :WMToggle, :NERDTree :TlistToggle
+" 查找
+" :CtrlP(文件), 
+" :CtrlSF/:CtrlSFOpen(字符串), 
+" :Ag, 
+" C-], ctag 
+" :cs find, C文件

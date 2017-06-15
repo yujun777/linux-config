@@ -29,15 +29,21 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'jlanzarotta/bufexplorer'
 "窗口管理
 Bundle 'vim-scripts/winmanager'
+Bundle 'majutsushi/tagbar'
 
 "---------------------------------------------
-"查找
+"查找跳转
+"字符串搜索
 Bundle 'mileszs/ack.vim'
 Bundle 'dyng/ctrlsf.vim'
+"文件跳转
+Bundle 'kien/ctrlp.vim'
 "---------------------------------------------
 "python支持 
 "语法检查
 Bundle 'scrooloose/syntastic'
+"补全提示
+Bundle 'davidhalter/jedi-vim'
 
 "---------------------------------------------
 "lua支持
