@@ -2,26 +2,55 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+"---------------------------------------------
 "Bundle 'gmarik/vundle'
-"Bundle 'Lokaltog/vim-powerline'
-Bundle 'bling/vim-airline'
 Bundle 'vim-misc'
-Bundle 'xolox/vim-lua-ftplugin'
+
+"---------------------------------------------
+"运行程序
 Bundle 'Shougo/vimshell.vim'
 Bundle 'Shougo/vimproc.vim'
-"Bundle 'Shougo/neocomplete.vim'
-Bundle 'vim-scripts/lua.vim'
-Bundle 'vim-scripts/OmniCppComplete'
-Bundle 'vim-scripts/a.vim'
-Bundle 'lua-support'
-Bundle 'scrooloose/nerdtree'
+
+"---------------------------------------------
+"信息栏
+Bundle 'bling/vim-airline'
+
+"---------------------------------------------
+"补全
 Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'vim-scripts/AutoComplPop'
+
+"---------------------------------------------
+"列表窗口
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/taglist.vim'
+"历史buf
+Bundle 'jlanzarotta/bufexplorer'
+"窗口管理
+Bundle 'vim-scripts/winmanager'
+
+"---------------------------------------------
+"python支持 
+"语法检查
+Bundle 'scrooloose/syntastic'
+
+"---------------------------------------------
+"lua支持
+Bundle 'xolox/vim-lua-ftplugin'
+Bundle 'vim-scripts/lua.vim'
+Bundle 'lua-support'
+
+"---------------------------------------------
+"C支持
+"头文件源文件切换
+Bundle 'vim-scripts/a.vim'
+
+"---------------------------------------------
+"工具
 "Bundle 'yakiang/excel.vim'
 "Bundle 'yuratomo/w3m.vim'
 "Bundle 'rhysd/open-pdf.vim'
-"python syntax check
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/taglist.vim'
 
+"---------------------------------------------
 filetype plugin indent on 
