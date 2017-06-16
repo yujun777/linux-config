@@ -113,8 +113,8 @@ function! NERDTree_IsValid()
     return 1  
 endfunction  
 
-let g:tagbar_vertical = 40
 let g:Tagbar_title = "[Tagbar]"
+let g:tagbar_width = 20
 function! Tagbar_Start()
     exec 'TagbarOpen'
 endfunction
