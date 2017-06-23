@@ -51,7 +51,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z colored-man-pages colorize  command-not-found github cp history)
+plugins=(git z colorize  command-not-found github cp history)
 
 source $ZSH/oh-my-zsh.sh
 
