@@ -41,7 +41,7 @@ Bundle 'kien/ctrlp.vim'
 "---------------------------------------------
 "python支持 
 "语法检查
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 "补全提示
 Bundle 'davidhalter/jedi-vim'
 
