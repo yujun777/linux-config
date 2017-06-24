@@ -1,6 +1,14 @@
 #vim
-ack
+ag
 cscope
 ctags
+
+#文件目录
+ncdu
+
+#fun 
+cowsay 
+xcowsay
+sl
 
 

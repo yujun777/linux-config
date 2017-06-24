@@ -1,67 +1,25 @@
-export GEN_HOST="yujun@10.250.213.133"
-export GEN_PORT="32200"
-export TERM=xterm-color 
-export LANG=zh_CN.GBK
-export PATH=~/usr/bin:~/usr/local/bin/:~/usr/local/perl/bin/:$PATH
+#export TERM=xterm-color 
+#export LANG=zh_CN.GBK
 export LD_LIBRARY_PATH=~/usr/lib:~/usr/local/lib:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=~/usr/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
-export PERL5LIB=~/usr/local/perl/lib/perl5/:~/usr/local/perl/lib/perl5/site_perl
-alias ls='ls -G'
-alias ll='ls -l'
-alias sshgentoo='ssh $GEN_HOST -p $GEN_PORT'
-
-#alias fg='find . -name "*.lua" | xargs grep /!$ '
+#alias ls='ls -G'
+#alias ll='ls -l'
 
 #文件查找
-alias myfind="find . -name '*.lua' -o -name '*.txt' -o -name '*.h' -o -name '*.hpp' -o -name '*.c' -o -name '*.cpp'"
-alias fs="myfind | xargs grep $1"
-alias fw="myfind | xargs grep -w $1" 
-
-#alias fgsub='find . -name "*.lua" | xargs sed -i.bak $1'
-#alias fgsub='sed -i.bak "s/$1/$2/g" `grep $1 -rl *.lua`'
 function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i.bak "s/$1/$2/g" ; }
-alias rmbak='find . -name "*.bak" | xargs rm -f'
-alias vs='vs(){ find  . -type  f  -name "*.lua" -exec  grep -l $1 {} \; | vim - ;};vs'
-alias vw='vw(){ find  . -type  f  -name "*.lua" -exec  grep -w -l $1 {} \; | vim - ;};vw'
-alias cdgate='cd ~/game/gate_dh3/logic'
-Year=2017
-function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
-function showinfo() {  svn info | grep -E "dh25|dh3_free|trunk|branch|branches|beta|test|shiwan" ; }
-function cddh() { cd ~/game/dh3/logic && showinfo; }
-function cddhcross() { cd ~/game/dh3_cross/logic && showinfo; }
-function cddhfree() { cd ~/game/dh3free/logic && showinfo; }
-function cddhfreecross() { cd ~/game/dh3free_cross/logic && showinfo; }
-function dhcd() { cd ~/game/dh3 && rm -rf logic && ln -s "$@" logic && cd logic && showinfo; }
-function dhfreecd() { cd ~/game/dh3free && rm -rf logic && ln -s "$@" logic && cd logic && showinfo; }
-function betasw() { cd ~/game/dh3/beta && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh25/server/beta/${Year}"$@"/logic && showinfo; }
-function testsw() { cd ~/game/dh3/test && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh25/server/test/${Year}"$@"/logic && showinfo; }
-function shiwansw() { cd ~/game/dh3/shiwan && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh25/server/branch/shiwan${Year}"$@"/logic && showinfo; }
-function branchsw() { cd ~/game/dh3/branch && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh25/server/branch/yujun/"$@"/logic && showinfo; }
-function trunk2sw() { cd ~/game/dh3/branch && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh25/server/branch/yujun/"$@"/logic && showinfo; }
-function freebetasw() { cd ~/game/dh3free/beta && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh3_free/server/beta/${Year}"$@"/logic && showinfo; }
-function freetestsw() { cd ~/game/dh3free/test && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh3_free/server/test/${Year}"$@"/logic && showinfo; }
-function freebranchsw() { cd ~/game/dh3free/branch && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh3_free/server/branches/yujun/"$@"/logic && showinfo; }
-function freetrunk2sw() { cd ~/game/dh3free/trunk2 && svn sw https://svn-dhxy3.gz.netease.com/dh3/dh3_free/server/branches/"$@"/logic && showinfo; }
-function weeksw() { betasw "$@" ; testsw "$@" ; shiwansw "$@" ; freebetasw "$@" ; freetestsw "$@"; }
 
-function svnuptags() 
-{
-	svn up ~/game/"$@"/trunk; 
-	svn up ~/game/"$@"/trunk/xml; 
-	svn up ~/game/"$@"/beta; 
-	svn up ~/game/"$@"/test; 
-	svn up ~/game/"$@"/shiwan; 
-}
-
-function svnup()
-{
-	svnuptags dh3;
-	svnuptags dh3free;
-	svn up ~/game/bridge_dh3/trunk/
-	svn up ~/game/bridge_dh3free/trunk/
-}
-
-export CLICOLOR=1
-export LSCOLORS=gxfxaxdxcxegedabagacad
+#export CLICOLOR=1
+#export LSCOLORS=gxfxaxdxcxegedabagacad
 export GREP_OPTIONS='--color=auto' 
+
+# Less Colors for Man Pages
+export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\e[01;38;74m'  # begin bold
+export LESS_TERMCAP_me=$'\e[0m'           # end mode
+export LESS_TERMCAP_so=$'\e[33;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+export LESS_TERMCAP_us=$'\e[32;4;146m' # begin underline
+export LESS_TERMCAP_ue=$'\e[0m'           # end underline
+
+alias cat='colorize'
