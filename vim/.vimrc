@@ -23,16 +23,15 @@ let mapleader=";"
 "-------------------------------------------------
 "                 样式
 "set ambiwidth=double
-set smartindent  
-set backspace=indent,eol,start
 set nowrap
 set nu
 set smarttab  
 set expandtab  
-set tabstop=4  
 set softtabstop=4  
 set shiftwidth=4  
 set backspace=2
+set smartindent  
+set backspace=indent,eol,start
 
 "不折叠
 set nofoldenable
@@ -41,7 +40,8 @@ set nofoldenable
 syntax on
 
 filetype plugin indent on  
-autocmd FileType python set omnifunc=pythoncomplete#Complete  
+autocmd FileType * set tabstop=4
+autocmd FileType python set omnifunc=pythoncomplete#Complete  list listchars=tab:>-,trail:-  
 
 set completeopt=longest,menu
 
@@ -57,6 +57,7 @@ colorscheme peachpuff
 "hi Comment ctermfg=DarkGrey ctermbg=black guifg=DarkGrey gui=bold
 hi Comment    term=reverse  ctermfg=darkgreen 
 "darkcyan
+"
 
 "-------------------------------------------------
 "                 cscope
@@ -156,3 +157,6 @@ let g:Powerline_symbols = 'fancy'
 " :Ag, 
 " C-], ctag 
 " :cs find, C文件
+"
+"显示tab
+"

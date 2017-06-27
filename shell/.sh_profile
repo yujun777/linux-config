@@ -11,7 +11,7 @@ function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i
 
 #export CLICOLOR=1
 #export LSCOLORS=gxfxaxdxcxegedabagacad
-export GREP_OPTIONS='--color=auto' 
+#export GREP_OPTIONS='--color=auto' 
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
