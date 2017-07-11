@@ -86,6 +86,8 @@ source $ZSH/oh-my-zsh.sh
 #
 
 source ~/.profile
-game="/mnt/share/e/g69/"
-alias cdserver="cd $game/server/logic"
-alias cdclient="cd $game/client/script"
+game="/media/sf_E_DRIVE/g69/"
+alias cdserver="cd $game/svr/logic"
+alias cdclient="cd $game/demo/script"
+alias cdxml="cd $game/xml"
+alias svnup="cd $game && svn up demo svr xml ui doc"

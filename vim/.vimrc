@@ -26,10 +26,10 @@ let mapleader=";"
 set nowrap
 set nu
 set smarttab  
-set expandtab  
 set softtabstop=4  
 set shiftwidth=4  
 set backspace=2
+set noexpandtab
 set smartindent  
 set backspace=indent,eol,start
 
@@ -40,8 +40,8 @@ set nofoldenable
 syntax on
 
 filetype plugin indent on  
-autocmd FileType * set tabstop=4
-autocmd FileType python set omnifunc=pythoncomplete#Complete  list listchars=tab:>-,trail:-  
+autocmd FileType * set tabstop=4  noexpandtab
+autocmd FileType python set omnifunc=pythoncomplete#Complete  listchars=tab:>-,trail:-  
 
 set completeopt=longest,menu
 
