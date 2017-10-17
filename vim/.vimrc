@@ -17,6 +17,9 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 "set fileencodings=gbk  
 
+"退出vim后屏幕显示编辑内容
+set  t_ti= t_te=
+
 "-------------------------------------------------
 "                 快捷键
 let mapleader=";"
