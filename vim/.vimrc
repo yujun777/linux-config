@@ -99,7 +99,7 @@ let NERDTreeWinPos="right"
 " let NERDTreeShowBookmarks=1
 "
 " 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+let NERDTreeIgnore=['\.pyc','\~$','\.swp', '\.o', '\.a']
 "-------------------------------------------------
 "               界面管理
 let g:winManagerWidth = 25
