@@ -16,10 +16,16 @@ Bundle 'Shougo/vimproc.vim',{'do' : 'make'}
 Bundle 'bling/vim-airline'
 
 "---------------------------------------------
+"编辑
+
+"回撤
+Bundle 'sjl/gundo.vim'
+"---------------------------------------------
 "补全
 Bundle 'ervandew/supertab'
-Bundle 'vim-scripts/OmniCppComplete'
+"Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'vim-scripts/AutoComplPop'
+"Bundle 'Valloric/YouCompleteMe'
 
 "---------------------------------------------
 "列表窗口
@@ -30,6 +36,8 @@ Bundle 'jlanzarotta/bufexplorer'
 "窗口管理
 Bundle 'vim-scripts/winmanager'
 Bundle 'majutsushi/tagbar'
+"Buffer显示
+Bundle 'fholgado/minibufexpl.vim'
 
 "---------------------------------------------
 "查找跳转
@@ -53,9 +61,16 @@ Bundle 'lua-support'
 
 "---------------------------------------------
 "C支持
-"头文件源文件切换
-Bundle 'vim-scripts/a.vim'
 
+"头文件源文件切换
+"Bundle 'vim-scripts/a.vim'
+Bundle 'derekwyatt/vim-fswitch'
+
+"语法高亮
+Bundle 'octol/vim-cpp-enhanced-highlight'
+
+"补全
+Bundle 'Rip-Rip/clang_complete'
 "---------------------------------------------
 "markdown支持
 Bundle 'plasticboy/vim-markdown'
