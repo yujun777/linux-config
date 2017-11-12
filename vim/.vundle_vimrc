@@ -77,6 +77,12 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'iamcco/mathjax-support-for-mkdp'
 "Bundle 'iamcco/markdown-preview.vim'
 "---------------------------------------------
+" tmux
+"
+" copy
+Bundle 'tmux-plugins/vim-tmux-focus-events'
+Bundle 'roxma/vim-tmux-clipboard'
+"---------------------------------------------
 "工具
 "Bundle 'yakiang/excel.vim'
 "Bundle 'yuratomo/w3m.vim'
