@@ -4,7 +4,7 @@
 " 引用自定义的vundle配置文件
 source ~/.vundle_vimrc 
 " 让配置变更立即生效
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "-------------------------------------------------
 "                 编码
 "let $LANG="zh_CN.UTF-8"
@@ -12,7 +12,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 "set encoding=gbk
 "set fileencoding=gb2312
-"set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 "set termencoding=gbk
 
 "set fileencodings=gbk  
@@ -47,7 +47,13 @@ autocmd FileType * set tabstop=4  noexpandtab
 autocmd FileType python set omnifunc=pythoncomplete#Complete  listchars=tab:>-,trail:-  
 
 set completeopt=longest,menu
+"-------------------------------------------------
+"			      光标
+" 显示光标当前位置
+set ruler
 
+" 禁止光标闪烁
+set gcr=a:block-blink
 "-------------------------------------------------
 "                 主题
 "set t_Co=256
@@ -62,6 +68,20 @@ hi Comment    term=reverse  ctermfg=darkgreen
 "darkcyan
 "
 
+"-------------------------------------------------
+"                 gundo(回撤功能)
+nnoremap <Leader>ud :GundoToggle<CR>
+
+"开启保存 undo 历史功能
+set undofile
+"undo 历史保存路径
+set undodir=~/.undo_history/
+"-------------------------------------------------
+"				  信息游览
+"启用:Man命令查看各类man信息
+source $VIMRUNTIME/ftplugin/man.vim
+"定义:Man命令查看各类man信息的快捷键
+nmap <Leader>man :Man 3 <cword><CR>
 "-------------------------------------------------
 "                 cscope
 if filereadable("cscope.out") 
@@ -86,6 +106,14 @@ let Tlist_Use_Right_Window=1                 " 在右侧窗口中显示
 "                  vim lua file ftpplugin
 "let g:lua_check_globals = 1
 let g:lua_complete_omni = 1
+"-------------------------------------------------
+"                 minibufexpl
+let g:miniBufExplorerAutoStart = 0
+"显示/隐藏 MiniBufExplorer 窗口
+map <Leader>bl :MBEToggle<cr>
+"buffer 切换快捷键
+map <C-Tab> :MBEbn<cr>
+map <C-S-Tab> :MBEbp<cr>
 "-------------------------------------------------
 "                 NERD_tree
 " 在 vim 启动的时候默认开启 NERDTree（autocmd 可以缩写为 au）
@@ -139,14 +167,29 @@ let g:ctrlp_custom_ignore = {
 "-------------------------------------------------
 "           CtrlSF
 "nnoremap <Leader>sf :CtrlSF<CR>
-nmap <Leader>sf :CtrlSF <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>s :CtrlSF <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>st :CtrlSFToggle<CR>
+nmap <Leader>sw :CtrlSF -W <C-R>=expand("<cword>")<CR><CR>
+"-------------------------------------------------
+"			vim-fswitch
+" *.cpp 和 *.h 间切换
+nmap <silent> <Leader>f :FSHere<cr>
 "-------------------------------------------------
 "               powerline
 set laststatus=2
 set guifont=PowerlineSymbols\ for\ Powerline
 set nocompatible
 let g:Powerline_symbols = 'fancy'
-"-------------------------------------------------
+"=================================================
+"				C++
+"------------------
+" 语法高亮 vim-cpp-enhanced-highlight
+let g:cpp_no_function_highlight = 1
+let g:cpp_concepts_highlight = 1
+
+"补全功能 clang_complete
+let g:clang_library_path='/usr/lib/libclang.so'
+"=================================================
 "一些VIM帮助
 ":helptags ~/.vim/doc 重新编译帮助文件
 "-------------------------------------------------

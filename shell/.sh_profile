@@ -1,25 +1,14 @@
 #export TERM=xterm-color 
 #export LANG=zh_CN.GBK
-export LD_LIBRARY_PATH=~/usr/lib:~/usr/local/lib:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=~/usr/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
+export UNIX_PRO_PATH=$HOME/git/unix_program/common
+export PATH=$PATH:$UNIX_PRO_PATH
+export LD_LIBRARY_PATH=$UNIX_PRO_PATH
+#export C_INCLUDE_PATH=~/usr/include:$C_INCLUDE_PATH
+#export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
 #alias ls='ls -G'
 #alias ll='ls -l'
 
 #文件查找
 function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i.bak "s/$1/$2/g" ; }
-
-#export CLICOLOR=1
-#export LSCOLORS=gxfxaxdxcxegedabagacad
-#export GREP_OPTIONS='--color=auto' 
-
-# Less Colors for Man Pages
-#export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
-#export LESS_TERMCAP_md=$'\e[01;38;74m'  # begin bold
-#export LESS_TERMCAP_me=$'\e[0m'           # end mode
-#export LESS_TERMCAP_so=$'\e[33;246m'    # begin standout-mode - info box
-#export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
-#export LESS_TERMCAP_us=$'\e[32;4;146m' # begin underline
-#export LESS_TERMCAP_ue=$'\e[0m'           # end underline
 
 alias ccat='colorize'
