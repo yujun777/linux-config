@@ -188,7 +188,15 @@ let g:cpp_no_function_highlight = 1
 let g:cpp_concepts_highlight = 1
 
 "补全功能 clang_complete
-let g:clang_library_path='/usr/lib/libclang.so'
+let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+if isdirectory(s:clang_library_path)
+	let g:clang_library_path=s:clang_library_path
+else
+	let s:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+	if isdirectory(s:clang_library_path)
+		let g:clang_library_path=s:clang_library_path
+	endif
+endif
 "=================================================
 "一些VIM帮助
 ":helptags ~/.vim/doc 重新编译帮助文件
