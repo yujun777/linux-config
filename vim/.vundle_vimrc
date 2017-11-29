@@ -60,6 +60,10 @@ Bundle 'vim-scripts/lua.vim'
 Bundle 'lua-support'
 
 "---------------------------------------------
+"kotlin支持
+Bundle 'udalov/kotlin-vim'
+
+"---------------------------------------------
 "C支持
 
 "头文件源文件切换
