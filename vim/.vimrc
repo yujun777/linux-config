@@ -45,6 +45,7 @@ syntax on
 filetype plugin indent on  
 autocmd FileType * set tabstop=4  noexpandtab
 autocmd FileType python set omnifunc=pythoncomplete#Complete  listchars=tab:>-,trail:-  
+set listchars=tab:>-,trail:-
 
 set completeopt=longest,menu
 "-------------------------------------------------
