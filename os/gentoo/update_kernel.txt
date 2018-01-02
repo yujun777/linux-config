@@ -1,0 +1,9 @@
+1. eselect kernel select
+2. genkernel --menuconfig --all   
+3. mount /boot /dev/sda1
+4. grub-mkconfig -o /boot/grub/grub.cfg
+
+如果virtualbox addition失败的话
+
+emerge app-emulation/virtualbox-guest-additions
+
