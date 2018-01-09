@@ -1,7 +1,7 @@
 #export TERM=xterm-color 
 #export LANG=zh_CN.GBK
 export UNIX_PRO_PATH=$HOME/git/unix_program/common
-export PATH=$PATH:$UNIX_PRO_PATH:$HOME/bin
+export PATH=$PATH:$UNIX_PRO_PATH
 export LD_LIBRARY_PATH=$UNIX_PRO_PATH
 #export C_INCLUDE_PATH=~/usr/include:$C_INCLUDE_PATH
 #export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
