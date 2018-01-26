@@ -75,6 +75,9 @@ Bundle 'octol/vim-cpp-enhanced-highlight'
 
 "补全
 Bundle 'Rip-Rip/clang_complete'
+
+"注释
+Bundle 'scrooloose/nerdcommenter'
 "---------------------------------------------
 "markdown支持
 Bundle 'plasticboy/vim-markdown'
