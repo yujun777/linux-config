@@ -108,6 +108,10 @@ let Tlist_Use_Right_Window=1                 " 在右侧窗口中显示
 "let g:lua_check_globals = 1
 let g:lua_complete_omni = 1
 "-------------------------------------------------
+command! -nargs=+ Cppman silent! call system("tmux split-window cppman " .expand(<q-args>))
+"command! -nargs=+ Cppman silent! call system("cppman " .expand(<q-args>))
+"
+"-------------------------------------------------
 "                 minibufexpl
 let g:miniBufExplorerAutoStart = 0
 "显示/隐藏 MiniBufExplorer 窗口
@@ -188,6 +192,7 @@ let g:Powerline_symbols = 'fancy'
 let g:cpp_no_function_highlight = 1
 let g:cpp_concepts_highlight = 1
 
+"------------------
 "补全功能 clang_complete
 let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
 if isdirectory(s:clang_library_path)
@@ -198,6 +203,33 @@ else
 		let g:clang_library_path=s:clang_library_path
 	endif
 endif
+
+"------------------
+"补全功能 YouCompleteMe
+" 开启语义补全
+"let g:ycm_seed_identifiers_with_syntax=1
+" 在注释输入中也能补全
+"let g:ycm_complete_in_comments=1
+"let g:ycm_collect_identifiers_from_tags_files=1
+"let g:ycm_min_num_of_chars_for_completion=1
+" 在字符串输入中也能补全
+"let g:ycm_complete_in_strings = 1
+"let g:ycm_filetype_blacklist = { 'tagbar' : 1, 'nerdtree' : 1, }
+" 设置默认的.ycm_extra_conf.py文件
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" 关闭语法检测
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+"let g:ycm_confirm_extra_conf = 0
+"let g:ycm_cache_omnifunc=0
+"let g:ycm_server_keep_logfiles = 1
+" 不弹出Scratch窗
+"set completeopt-=previe
+nnoremap <leader>jd : YcmCompleter GoToDefinition<CR>
+
+command! Ycmc silent! call system("wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/c/.ycm_extra_conf.py -o .ycm_extra_conf.py")
+command! Ycmcpp silent! call system("wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/cpp/.ycm_extra_conf.py")
+
 "=================================================
 "一些VIM帮助
 ":helptags ~/.vim/doc 重新编译帮助文件

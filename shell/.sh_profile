@@ -7,6 +7,8 @@ export LD_LIBRARY_PATH=$UNIX_PRO_PATH
 #export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
 #alias ls='ls -G'
 #alias ll='ls -l'
+alias ..="cd .."
+alias ...="cd ../.."
 
 #文件查找
 function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i.bak "s/$1/$2/g" ; }

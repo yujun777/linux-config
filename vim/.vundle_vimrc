@@ -1,98 +1,97 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 "---------------------------------------------
-"Bundle 'gmarik/vundle'
-Bundle 'vim-misc'
+"Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-misc'
 
 "---------------------------------------------
 "运行程序
-Bundle 'Shougo/vimshell.vim'
-Bundle 'Shougo/vimproc.vim',{'do' : 'make'}
+Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim',{'do' : 'make'}
 
 "---------------------------------------------
 "信息栏
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 
 "---------------------------------------------
 "编辑
 
 "回撤
-Bundle 'sjl/gundo.vim'
+Plugin 'sjl/gundo.vim'
 "---------------------------------------------
 "补全
-Bundle 'ervandew/supertab'
-"Bundle 'vim-scripts/OmniCppComplete'
-Bundle 'vim-scripts/AutoComplPop'
-"Bundle 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
+"Plugin 'vim-scripts/OmniCppComplete'
+Plugin 'vim-scripts/AutoComplPop'
+"Plugin 'Rip-Rip/clang_complete' "c++补全
+Plugin 'Valloric/YouCompleteMe'
 
 "---------------------------------------------
 "列表窗口
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/taglist.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
 "历史buf
-Bundle 'jlanzarotta/bufexplorer'
+Plugin 'jlanzarotta/bufexplorer'
 "窗口管理
-Bundle 'vim-scripts/winmanager'
-Bundle 'majutsushi/tagbar'
+Plugin 'reachfish/vim-winmanager' 
+Plugin 'majutsushi/tagbar'
 "Buffer显示
-Bundle 'fholgado/minibufexpl.vim'
+Plugin 'fholgado/minibufexpl.vim'
 
 "---------------------------------------------
 "查找跳转
 "字符串搜索
-Bundle 'mileszs/ack.vim'
-Bundle 'dyng/ctrlsf.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'dyng/ctrlsf.vim'
 "文件跳转
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 "---------------------------------------------
 "python支持 
 "语法检查
-"Bundle 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 "补全提示
-Bundle 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 
 "---------------------------------------------
 "lua支持
-Bundle 'xolox/vim-lua-ftplugin'
-Bundle 'vim-scripts/lua.vim'
-Bundle 'lua-support'
+Plugin 'xolox/vim-lua-ftplugin'
+Plugin 'vim-scripts/lua.vim'
+Plugin 'lua-support'
 
 "---------------------------------------------
 "kotlin支持
-Bundle 'udalov/kotlin-vim'
+Plugin 'udalov/kotlin-vim'
 
 "---------------------------------------------
 "C支持
 
 "头文件源文件切换
-"Bundle 'vim-scripts/a.vim'
-Bundle 'derekwyatt/vim-fswitch'
+"Plugin 'vim-scripts/a.vim'
+Plugin 'reachfish/vim-fswitch'  
 
 "语法高亮
-Bundle 'octol/vim-cpp-enhanced-highlight'
-
-"补全
-Bundle 'Rip-Rip/clang_complete'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 "注释
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 "---------------------------------------------
 "markdown支持
-Bundle 'plasticboy/vim-markdown'
-Bundle 'iamcco/mathjax-support-for-mkdp'
-"Bundle 'iamcco/markdown-preview.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'iamcco/mathjax-support-for-mkdp'
+"Plugin 'iamcco/markdown-preview.vim'
 "---------------------------------------------
 " tmux
 "
 " copy
-Bundle 'tmux-plugins/vim-tmux-focus-events'
-Bundle 'roxma/vim-tmux-clipboard'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'roxma/vim-tmux-clipboard'
 "---------------------------------------------
 "工具
-"Bundle 'yakiang/excel.vim'
-"Bundle 'yuratomo/w3m.vim'
-"Bundle 'rhysd/open-pdf.vim' 
+"Plugin 'yakiang/excel.vim'
+"Plugin 'yuratomo/w3m.vim'
+"Plugin 'rhysd/open-pdf.vim' 
 "---------------------------------------------
+call vundle#end()
 filetype plugin indent on 
