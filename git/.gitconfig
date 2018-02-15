@@ -8,3 +8,5 @@
 ##保存密码
 [credential]
 	helper = store
+[http]
+	postBuffer = 524288000
