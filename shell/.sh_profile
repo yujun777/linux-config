@@ -1,7 +1,6 @@
 #export TERM=xterm-color 
 #export LANG=zh_CN.GBK
 export UNIX_PRO_PATH=$HOME/git/unix_program/common
-export PATH=$PATH:$UNIX_PRO_PATH:/home/yujun/git/log_plot
 export LD_LIBRARY_PATH=$UNIX_PRO_PATH
 #export C_INCLUDE_PATH=~/usr/include:$C_INCLUDE_PATH
 #export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
@@ -15,6 +14,15 @@ function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i
 function subptr() { find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) -exec grep -rl "unique_ptr" {} \; | xargs sed -i.bak "s/std::unique_ptr<\([^*]*\)>/\1\*/g" ; }
 
 alias ccat='colorize'
+
+if [ `uname -s` = "Darwin" ]; then
+	export CLICOLOR=1
+	export LSCOLORS=gxfxaxdxcxegedabagacad
+	export PYTHONSTARTUP=~/.pythonstartup.py
+	alias -s pdf="open '/Applications/Foxit Reader.app/'"
+
+	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+fi 
 
 # TMUX
 if which tmux >/dev/null 2>&1; then
