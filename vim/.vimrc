@@ -68,7 +68,16 @@ colorscheme peachpuff
 hi Comment    term=reverse  ctermfg=darkgreen 
 "darkcyan
 "
-
+"-------------------------------------------------
+"                窗口
+"宽度+10 
+nmap <Leader>va :vertical resize +10<CR> 
+"宽度-10 
+nmap <Leader>vm :vertical resize -10<CR> 
+"高度+10 
+nmap <Leader>a :resize +10<CR> 
+"高度-10 
+nmap <Leader>m :resize -10<CR> 
 "-------------------------------------------------
 "                 gundo(回撤功能)
 nnoremap <Leader>ud :GundoToggle<CR>
@@ -103,6 +112,7 @@ let Tlist_Show_One_File=0                    " 只显示当前文件的tags
 let Tlist_Exit_OnlyWindow=1                  " 如果Taglist窗口是最后一个窗口则退出Vim
 let Tlist_Use_Right_Window=1                 " 在右侧窗口中显示
 "let Tlist_File_Fold_Auto_Close=1             " 自动折叠
+nmap <Leader>lt :TlistToggle<CR>
 "-------------------------------------------------
 "                  vim lua file ftpplugin
 "let g:lua_check_globals = 1
@@ -174,7 +184,7 @@ let g:ctrlp_custom_ignore = {
 "nnoremap <Leader>sf :CtrlSF<CR>
 nmap <Leader>s :CtrlSF <C-R>=expand("<cword>")<CR><CR>
 nmap <Leader>st :CtrlSFToggle<CR>
-nmap <Leader>sw :CtrlSF -W <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>sw :CtrlSF  -ignoredir "*test*" -W <C-R>=expand("<cword>")<CR><CR>
 "-------------------------------------------------
 "			vim-fswitch
 " *.cpp 和 *.h 间切换

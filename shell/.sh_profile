@@ -12,6 +12,7 @@ alias ...="cd ../.."
 
 #文件查找
 function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i.bak "s/$1/$2/g" ; }
+function subptr() { find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) -exec grep -rl "unique_ptr" {} \; | xargs sed -i.bak "s/std::unique_ptr<\([^*]*\)>/\1\*/g" ; }
 
 alias ccat='colorize'
 
