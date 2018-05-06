@@ -10,7 +10,7 @@ source ~/.vundle_vimrc
 "let $LANG="zh_CN.UTF-8"
 "let $LANG="zh_CN.GBK"
 
-"set encoding=gbk
+set encoding=utf-8
 "set fileencoding=gb2312
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 "set termencoding=gbk
@@ -42,10 +42,12 @@ set nofoldenable
 "set term=dtterm
 syntax on
 
+set fileformats=dos,unix
 filetype plugin indent on  
 autocmd FileType * set tabstop=4  noexpandtab
 autocmd FileType python set omnifunc=pythoncomplete#Complete  listchars=tab:>-,trail:-  
 set listchars=tab:>-,trail:-
+set cino+=(0
 
 set completeopt=longest,menu
 "-------------------------------------------------

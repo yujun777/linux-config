@@ -2,18 +2,22 @@
 #export LANG=zh_CN.GBK
 export UNIX_PRO_PATH=$HOME/git/unix_program/common
 export LD_LIBRARY_PATH=$UNIX_PRO_PATH
+export PATH=$PATH:$HOME/bin
 #export C_INCLUDE_PATH=~/usr/include:$C_INCLUDE_PATH
 #export CPLUS_INCLUDE_PATH=~/usr/include:$CPLUS_INCLUDE_PATH 
 #alias ls='ls -G'
 #alias ll='ls -l'
 alias ..="cd .."
 alias ...="cd ../.."
+alias agi='ag --ignore "*test*"'
 
 #文件查找
 function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i.bak "s/$1/$2/g" ; }
 function subptr() { find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) -exec grep -rl "unique_ptr" {} \; | xargs sed -i.bak "s/std::unique_ptr<\([^*]*\)>/\1\*/g" ; }
+function vman() { man $* | col -b | vim -c 'set ft=man nomod nolist' -; }
 
 alias ccat='colorize'
+alias man='vman'
 
 if [ `uname -s` = "Darwin" ]; then
 	export CLICOLOR=1
