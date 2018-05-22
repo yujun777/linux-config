@@ -4,9 +4,12 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
-
 ##保存密码
 [credential]
 	helper = store
 [http]
 	postBuffer = 524288000
+[color]
+	ui = auto
+[oh-my-zsh]
+	hide-dirty = 1
