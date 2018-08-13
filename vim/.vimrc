@@ -190,6 +190,7 @@ nmap <Leader>sw :CtrlSF  -ignoredir "*test*" -W <C-R>=expand("<cword>")<CR><CR>
 "-------------------------------------------------
 "			vim-fswitch
 " *.cpp 和 *.h 间切换
+let g:fsnonewfiles = 1
 nmap <silent> <Leader>f :FSHere<cr>
 "-------------------------------------------------
 "               powerline
@@ -259,3 +260,6 @@ command! Ycmcpp silent! call system("wget --no-check-certificate https://raw.git
 "
 "显示tab
 "
+"
+
+set tw=0

@@ -65,6 +65,10 @@ Plugin 'lua-support'
 Plugin 'udalov/kotlin-vim'
 
 "---------------------------------------------
+"thrift支持
+Plugin 'solarnz/thrift.vim'
+
+"---------------------------------------------
 "C支持
 
 "头文件源文件切换
@@ -78,9 +82,12 @@ Plugin 'reachfish/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/nerdcommenter'
 "---------------------------------------------
 "markdown支持
-"Plugin 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'godlygeek/tabular'
 "Plugin 'iamcco/mathjax-support-for-mkdp'
 "Plugin 'iamcco/markdown-preview.vim'
+"Plugin 'tpope/vim-markdown'
+"Plugin 'gabrielelana/vim-markdown'
 "---------------------------------------------
 " tmux
 "
