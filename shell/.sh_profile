@@ -16,6 +16,49 @@ function fgsub() { find . -name "*.lua" -exec grep -rl "$1" {} \; | xargs sed -i
 function subptr() { find . \( -name "*.h" -o -name "*.cc" -o -name "*.cpp" \) -exec grep -rl "unique_ptr" {} \; | xargs sed -i.bak "s/std::unique_ptr<\([^*]*\)>/\1\*/g" ; }
 function vman() { man $* | col -b | vim -c 'set ft=man nomod nolist' -; }
 
+rockmqdir="$HOME/source/rocketmq/distribution/target/apache-rocketmq"
+
+function start-namesvr() {
+	cd $rockmqdir
+	nohup sh bin/mqnamesrv &
+	cd - > /dev/null 2>&1 ;
+}
+
+function stop-namesvr() {
+	cd $rockmqdir
+	sh bin/mqshutdown namesrv
+	cd - > /dev/null 2>&1 ;
+}
+
+function start-broker() {
+	cd $rockmqdir
+	nohup sh bin/mqbroker -n localhost:9876 &
+	cd - > /dev/null 2>&1 ;
+}
+
+function stop-broker() {
+	cd $rockmqdir
+	sh bin/mqshutdown broker
+	cd - > /dev/null 2>&1 ;
+}
+
+function restart-rockmq() {
+	stop-broker
+	sleep 5
+	stop-namesvr
+	sleep 5
+	rm -rf $HOME/logs
+	rm -rf $HOME/store
+	sleep 5
+	start-namesvr
+	sleep 5
+	start-broker
+}
+
+function rm-rocketmq-cpp-log () {
+    rm -rf $HOME/logs/rocketmq-cpp/
+}
+
 alias ccat='colorize'
 alias man='vman'
 
