@@ -66,9 +66,10 @@ set gcr=a:block-blink
 "colorscheme peachpuff
 "hi Comment  term=reverse  ctermfg=darkgreen
 
-colorscheme PaperColor
-hi Comment term=bold ctermfg=245 guifg=#6b7089
-hi LineNr term=underline ctermfg=243 ctermbg=235 guifg=#444b71 guibg=#1e2132
+set background=dark
+colorscheme peachpuff
+hi Comment term=bold ctermfg=darkblue guifg=#6b7089
+hi LineNr term=underline ctermfg=242 ctermbg=235 guifg=#444b71 guibg=#1e2132
 
 "注释颜色
 "hi LineNr guibg=darkgrey ctermbg=darkgrey guifg=white ctermfg=grey
