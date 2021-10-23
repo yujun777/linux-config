@@ -80,6 +80,9 @@ Plugin 'reachfish/vim-fswitch'
 "语法高亮
 Plugin 'reachfish/vim-cpp-enhanced-highlight'
 
+"a lot color主题
+Plugin 'rafi/awesome-vim-colorschemes'
+
 "注释
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'davidzchen/vim-bazel'
@@ -97,6 +100,7 @@ Plugin 'godlygeek/tabular'
 " copy
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'roxma/vim-tmux-clipboard'
+
 "---------------------------------------------
 "工具
 "Plugin 'yakiang/excel.vim'
