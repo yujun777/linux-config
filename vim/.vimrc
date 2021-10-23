@@ -243,6 +243,18 @@ nnoremap <leader>jd : YcmCompleter GoToDefinition<CR>
 command! Ycmc silent! call system("wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/c/.ycm_extra_conf.py -o .ycm_extra_conf.py")
 command! Ycmcpp silent! call system("wget --no-check-certificate https://raw.githubusercontent.com/vitahlin/Vim/master/YouCompleteMe/cpp/.ycm_extra_conf.py")
 
+" 选项1 在vim保存文件时自动格式化
+function! s:autoFmtC()
+	silent! execute "!bigo-format <afile> >/dev/null 2>&1"
+	silent! e
+endfunction
+
+"autocmd BufWritePost *.h,*.cpp call s:autoFmtC()
+
+" 选项2 使用快捷键格式化(例如Ctrl+F5)
+set autoread
+map <C-F5> : !bigo-format % <CR>
+
 "=================================================
 "一些VIM帮助
 ":helptags ~/.vim/doc 重新编译帮助文件

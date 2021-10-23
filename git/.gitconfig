@@ -13,3 +13,10 @@
 	ui = auto
 [oh-my-zsh]
 	hide-dirty = 1
+[https]
+	#proxy = socks5://127.0.0.1:1080
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
