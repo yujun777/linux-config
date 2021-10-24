@@ -66,14 +66,17 @@ set gcr=a:block-blink
 "colorscheme peachpuff
 "hi Comment  term=reverse  ctermfg=darkgreen
 
-set background=dark
-colorscheme peachpuff
-hi Comment term=bold ctermfg=darkblue guifg=#6b7089
-hi LineNr term=underline ctermfg=242 ctermbg=235 guifg=#444b71 guibg=#1e2132
+"set background=dark
+colorscheme OceanicNext
+hi Comment term=bold ctermfg=246 guifg=#65737e
+"hi Comment ctermfg=DarkGrey ctermbg=black guifg=DarkGrey gui=bold
+"hi Comment term=bold ctermfg=darkblue guifg=#6b7089
+
+"hi LineNr term=underline ctermfg=242 ctermbg=235 guifg=#444b71 guibg=#1e2132
+"hi LineNr term=underline ctermfg=240
 
 "注释颜色
 "hi LineNr guibg=darkgrey ctermbg=darkgrey guifg=white ctermfg=grey
-"hi Comment ctermfg=DarkGrey ctermbg=black guifg=DarkGrey gui=bold
 "darkcyan
 "
 "-------------------------------------------------
