@@ -82,6 +82,7 @@ Plugin 'reachfish/vim-cpp-enhanced-highlight'
 
 "a lot color主题
 Plugin 'rafi/awesome-vim-colorschemes'
+Plugin 'guns/xterm-color-table.vim'
 "Plugin 'NLKNguyen/papercolor-theme'
 
 "注释
