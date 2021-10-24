@@ -67,8 +67,9 @@ set gcr=a:block-blink
 "hi Comment  term=reverse  ctermfg=darkgreen
 
 "set background=dark
-colorscheme OceanicNext
-hi Comment term=bold ctermfg=246 guifg=#65737e
+colorscheme PaperColor
+hi LineNr term=underline ctermfg=243 ctermbg=235 guifg=#65737e guibg=#1b2b34
+hi Comment  ctermfg=246
 "hi Comment ctermfg=DarkGrey ctermbg=black guifg=DarkGrey gui=bold
 "hi Comment term=bold ctermfg=darkblue guifg=#6b7089
 
