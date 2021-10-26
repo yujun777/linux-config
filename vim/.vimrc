@@ -67,10 +67,14 @@ set gcr=a:block-blink
 "hi Comment  term=reverse  ctermfg=darkgreen
 
 "set background=dark
-colorscheme peachpuff
-"hi Normal ctermfg=251 ctermbg=234
-hi LineNr ctermfg=243
-hi Comment  ctermfg=2
+
+colorscheme codedark
+let g:airline_theme='codedark'
+
+"colorscheme peachpuff
+"hi LineNr ctermfg=243
+"hi Comment  ctermfg=2
+
 "hi Comment ctermfg=DarkGrey ctermbg=black guifg=DarkGrey gui=bold
 "hi Comment term=bold ctermfg=darkblue guifg=#6b7089
 
