@@ -70,6 +70,7 @@ set gcr=a:block-blink
 
 colorscheme codedark
 let g:airline_theme='codedark'
+hi TabLineSel ctermfg=darkcyan
 
 "colorscheme peachpuff
 "hi LineNr ctermfg=243
