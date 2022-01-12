@@ -76,6 +76,7 @@ Plugin 'solarnz/thrift.vim'
 "头文件源文件切换
 "Plugin 'vim-scripts/a.vim'
 Plugin 'reachfish/vim-fswitch'  
+Plugin 'ericcurtin/CurtineIncSw.vim'
 
 "语法高亮
 Plugin 'reachfish/vim-cpp-enhanced-highlight'

@@ -207,7 +207,11 @@ nmap <Leader>sw :CtrlSF  -ignoredir "*test*" -W <C-R>=expand("<cword>")<CR><CR>
 "			vim-fswitch
 " *.cpp 和 *.h 间切换
 let g:fsnonewfiles = 1
-nmap <silent> <Leader>f :FSHere<cr>
+"nmap <silent> <Leader>f :FSHere<cr>
+
+"           CurtineIncSw
+" *.cpp 和 *.h 间切换
+nmap <silent> <Leader>f :call CurtineIncSw()<cr>
 "-------------------------------------------------
 "               powerline
 set laststatus=2
