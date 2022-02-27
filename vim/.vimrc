@@ -71,6 +71,10 @@ set gcr=a:block-blink
 colorscheme codedark
 let g:airline_theme='codedark'
 hi TabLineSel ctermfg=darkcyan
+hi DiffAdd ctermbg=235 ctermfg=108 cterm=reverse guibg=#262626 guifg=#87af87 gui=reverse
+hi DiffChange ctermbg=235 ctermfg=103 cterm=reverse guibg=#262626 guifg=#8787af gui=reverse
+hi DiffDelete ctermbg=235 ctermfg=131 cterm=reverse guibg=#262626 guifg=#af5f5f gui=reverse
+hi DiffText ctermbg=235 ctermfg=208 cterm=reverse guibg=#262626 guifg=#ff8700 gui=reverse
 
 "colorscheme peachpuff
 "hi LineNr ctermfg=243
@@ -207,11 +211,11 @@ nmap <Leader>sw :CtrlSF  -ignoredir "*test*" -W <C-R>=expand("<cword>")<CR><CR>
 "			vim-fswitch
 " *.cpp 和 *.h 间切换
 let g:fsnonewfiles = 1
-"nmap <silent> <Leader>f :FSHere<cr>
+nmap <silent> <Leader>f :FSHere<cr>
 
 "           CurtineIncSw
 " *.cpp 和 *.h 间切换
-nmap <silent> <Leader>f :call CurtineIncSw()<cr>
+"nmap <silent> <Leader>f :call CurtineIncSw()<cr>
 "-------------------------------------------------
 "               powerline
 set laststatus=2
