@@ -106,6 +106,10 @@ Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'roxma/vim-tmux-clipboard'
 
 "---------------------------------------------
+"git
+Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/gv.vim'
+"---------------------------------------------
 "工具
 "Plugin 'yakiang/excel.vim'
 "Plugin 'yuratomo/w3m.vim'
