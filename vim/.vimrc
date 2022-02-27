@@ -292,6 +292,11 @@ map <C-F5> : !bigo-format % <CR>
 "
 "显示tab
 "
-"
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+"autocmd! User GoyoEnter Limelight
+"autocmd! User GoyoLeave Limelight!
 
 set tw=0
