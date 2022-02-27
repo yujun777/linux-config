@@ -1,0 +1,14 @@
+diff --git a/plugin/gv.vim b/plugin/gv.vim
+index ba2f054..54dee36 100644
+--- a/plugin/gv.vim
++++ b/plugin/gv.vim
+@@ -88,7 +88,8 @@ function! s:split(tab)
+     $wincmd w
+     enew
+   else
+-    vertical botright new
++    "vertical botright new
++    tabnew
+   endif
+   let w:gv = 1
+ endfunction
