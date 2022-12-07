@@ -1,6 +1,6 @@
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-ln -s ~/git/linux-config/vim/.vimrc ~/.vimrc
+ln -s ~/git/linux-config/vim/vimrc ~/.vimrc
 declare -a vimcfgs=("vundle_vimrc"  "ycm_vimrc"  "ycm_extra_conf.py")
 for file in "${vimcfgs[@]}"
 do
