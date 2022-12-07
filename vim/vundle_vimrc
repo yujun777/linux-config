@@ -24,11 +24,15 @@ Plugin 'cespare/vim-toml'
 Plugin 'sjl/gundo.vim'
 "---------------------------------------------
 "补全
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 "Plugin 'vim-scripts/OmniCppComplete'
-Plugin 'vim-scripts/AutoComplPop'
+"Plugin 'vim-scripts/AutoComplPop'
 "Plugin 'Rip-Rip/clang_complete' "c++补全
 "Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator', { 'branch': 'stable'}  "generate .ycm_extra_conf.py
+"Plugin 'grailbio/bazel-compilation-database'
 
 "---------------------------------------------
 "列表窗口
