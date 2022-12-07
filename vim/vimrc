@@ -311,3 +311,6 @@ let g:limelight_conceal_ctermfg = 240
 set tw=0
 "set paste
 "setlocal omnifunc=python3complete#Complete
+if has("autocmd")
+   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
