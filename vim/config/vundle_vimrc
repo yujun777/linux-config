@@ -8,8 +8,9 @@ Plugin 'vim-misc'
 
 "---------------------------------------------
 "运行程序
-Plugin 'Shougo/vimshell.vim'
+"Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim',{'do' : 'make'}
+Plugin 'Shougo/deol.nvim'
 
 "---------------------------------------------
 "信息栏
